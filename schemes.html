@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Schemes of Arrangement 101</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="How Indian schemes of arrangement work, with interactives and nuances.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..800&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="assets/site.css">
+</head><body data-page="schemes">
+<div class="appbar"><div class="in">
+  <a class="brand" href="index.html" style="text-decoration:none;color:inherit"><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><path d="M2 6c5 0 6 10 11 10s5-6 7-6" fill="none" stroke="var(--copper)" stroke-width="2.4" stroke-linecap="round"/><path d="M2 12c4 0 5-6 9-6s5 10 9 10" fill="none" stroke="var(--blue)" stroke-width="2.4" stroke-linecap="round"/></svg><span>Restructuring</span><span class="full">Academy</span></a>
+  <nav class="navlinks" aria-label="Pages"><a href="index.html">Home</a><a href="motherson.html">Motherson case</a><a href="schemes.html" aria-current="page">Schemes 101</a><a href="practice.html">Practice Lab</a></nav>
+  <div class="bar-right"><span class="donechip" id="doneChip"></span>
+    <button class="iconbtn" type="button" onclick="openPal()" aria-label="Search"><svg width="15" height="15" viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M11 11l3.5 3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><span class="lbl">Search</span><kbd>/</kbd></button>
+    <button class="iconbtn" type="button" id="themeBtn" onclick="cycleTheme()"></button></div>
+</div><div class="readbar" id="readbar"></div></div>
+<main>
+<div class="wrap">
+<header class="hero2">
+  <div class="eyebrow">Companion guide · Indian corporate restructuring</div>
+  <h1 style="margin-top:10px">Schemes of Arrangement 101</h1>
+  <p class="lede">The legal machine behind Motherson's deal, explained on its own. What a scheme is, when bankers use one, how it moves through SEBI and the NCLT, the vote maths, tax and accounting, and four real Indian deals to compare.</p>
+  <svg class="herowires" viewBox="0 0 800 70" preserveAspectRatio="none" aria-hidden="true"><path d="M0 20 C120 5 200 45 320 25 S560 5 800 22" style="stroke:var(--copper)"/><path d="M0 38 C140 55 240 15 380 36 S600 60 800 38" style="stroke:var(--blue)"/><path d="M0 56 C100 40 260 66 400 52 S640 36 800 56" style="stroke:var(--green)"/></svg>
+  <nav class="jump" aria-label="Scheme lessons">
+    <a href="#s1"><span>01</span>What it is</a><a href="#s2"><span>02</span>Types</a><a href="#s3"><span>03</span>Which route?</a>
+    <a href="#s4"><span>04</span>The process</a><a href="#s5"><span>05</span>Votes</a><a href="#s6"><span>06</span>SEBI layer</a>
+    <a href="#s7"><span>07</span>Tax &amp; accounting</a><a href="#s8"><span>08</span>Dates</a><a href="#s9"><span>09</span>Swap ratio</a>
+    <a href="#s10"><span>10</span>Real deals</a><a href="#s11"><span>11</span>Banker checklist</a><a href="#s12"><span>12</span>Flashcards</a><a href="#s13"><span>13</span>Self-test</a><a href="#s14"><span>14</span>Nuances</a><a href="#s15"><span>15</span>Demerger wave</a>
+  </nav>
+</header>
+
+<section id="s1">
+  <div class="lesson"><span class="n">01</span><h2>What a scheme of arrangement is</h2></div>
+  <p>A <b>scheme of arrangement</b> is a plan to reorganise one or more companies that the company proposes, its shareholders and creditors vote on, and a tribunal (the <b>NCLT</b>) then sanctions. Once sanctioned, it binds <b>everyone</b> in the classes that voted, including people who voted against or didn't vote.</p>
+  <div class="box key"><span class="eyebrow">Plain-English analogy</span>
+    <p>Think of a housing society that wants to merge with the society next door. You can't get 500 people to each sign a separate contract. So the committee drafts one plan, every member votes, a court checks it is fair, and then the plan applies to all 500 people at once. That is a scheme.</p></div>
+  <div class="tbl"><table>
+    <thead><tr><th>Section (Companies Act, 2013)</th><th>What it covers</th></tr></thead>
+    <tbody>
+      <tr><td><b>s.230</b></td><td>Compromise or arrangement with members or creditors. The umbrella power, covering meetings, notices to regulators, and who may object.</td></tr>
+      <tr><td><b>s.231</b></td><td>The NCLT's power to enforce and supervise the scheme after sanction.</td></tr>
+      <tr><td><b>s.232</b></td><td>Mergers, amalgamations and demergers specifically: what the scheme must contain and the sanction order.</td></tr>
+      <tr><td><b>s.233</b></td><td>Fast-track merger for small companies, a holding company with its wholly owned subsidiary, and startups. Approved by the Regional Director, with no NCLT hearing.</td></tr>
+      <tr><td><b>s.234</b></td><td>Cross-border mergers (with RBI rules).</td></tr>
+      <tr><td><b>s.66</b></td><td>Reduction of share capital, often bundled into schemes.</td></tr>
+    </tbody>
+  </table></div>
+  <div class="grid2">
+    <div class="card"><h4>Why bankers love schemes</h4><p>Consideration can be paid in shares, so no cash is needed. It is tax-neutral if the conditions are met. It binds every holder, so there are no hold-outs. It is generally exempt from the takeover open offer. And several steps can go into one composite scheme.</p></div>
+    <div class="card"><h4>Why they are hard</h4><p>They are slow (9 to 18 months), go through many regulators, and every step is public. Valuation is open to challenge, and in promoter-linked deals the public's vote can block them.</p></div>
+  </div>
+</section>
+
+<section id="s2">
+  <div class="lesson"><span class="n">02</span><h2>The main types, animated</h2></div>
+  <div class="types">
+    <div class="tcard"><svg viewBox="0 0 160 80" aria-hidden="true"><circle class="a-ml" cx="50" cy="40" r="18"/><circle class="a-mr" cx="110" cy="40" r="18"/></svg><h4>Merger / amalgamation</h4><p>Two companies become one. Shareholders of the company that disappears get shares of the survivor at a swap ratio. <i>Example: HDFC Ltd into HDFC Bank.</i></p></div>
+    <div class="tcard"><svg viewBox="0 0 160 80" aria-hidden="true"><circle class="a-dl" cx="80" cy="40" r="18"/><circle class="a-dr" cx="80" cy="40" r="18"/></svg><h4>Demerger</h4><p>A business undertaking moves into a new or existing company, and the parent's shareholders get its shares. Usually mirror ownership. <i>Example: Jio Financial, ITC Hotels, MSWIL.</i></p></div>
+    <div class="tcard"><svg viewBox="0 0 160 80" aria-hidden="true"><rect class="a-big" x="40" y="40" width="80" height="32" rx="6"/><rect class="a-hold" x="60" y="6" width="40" height="22" rx="5"/></svg><h4>Promoter holdco merger</h4><p>The promoter's holding company merges into the listed company it owns. Its stake is cancelled and new shares go to the promoters directly. <i>Example: SAMIL into MSSL.</i></p></div>
+    <div class="tcard"><svg viewBox="0 0 160 80" aria-hidden="true"><rect class="a-shell" x="20" y="22" width="40" height="36" rx="6"/><rect class="a-op" x="96" y="14" width="52" height="52" rx="6"/></svg><h4>Reverse merger</h4><p>A larger (often unlisted) operating company merges into a smaller listed one to get a listing. SEBI scrutinises these closely.</p></div>
+    <div class="tcard"><svg viewBox="0 0 160 80" aria-hidden="true"><rect x="20" y="30" width="120" height="20" rx="4" class="a-cap-bg"/><rect class="a-cap" x="20" y="30" width="120" height="20" rx="4"/></svg><h4>Capital reduction (s.66)</h4><p>Cancel or return share capital, for example to write off accumulated losses or to return surplus cash.</p></div>
+    <div class="tcard"><svg viewBox="0 0 160 80" aria-hidden="true"><rect x="20" y="30" width="120" height="20" rx="4" class="a-cap-bg"/><rect class="a-debt" x="20" y="30" width="120" height="20" rx="4"/></svg><h4>Creditor compromise</h4><p>Lenders agree to take less, or to convert debt into equity, under a court-approved plan (outside the IBC).</p></div>
+  </div>
+</section>
+
+<section id="s3">
+  <div class="lesson"><span class="n">03</span><h2>Which route? The banker's decision</h2></div>
+  <p>A scheme is one of several ways to move a business or a stake. Answer five questions and the route finder suggests the best one, the way a banker would in a structuring paper.</p>
+  <div class="box">
+    <div id="rf" class="rf"></div>
+    <div id="rfout" class="verdict good"></div>
+  </div>
+  <div class="tbl"><table>
+    <thead><tr><th>Route</th><th>Paid in</th><th>Who approves</th><th>Tax-neutral?</th><th>Open offer?</th><th>Typical time</th></tr></thead>
+    <tbody>
+      <tr><td><b>NCLT scheme</b> (s.230 to 232)</td><td>Shares (or cash)</td><td>Board, shareholders and creditors, SEBI/exchanges, NCLT</td><td class="ok">Yes, if conditions met</td><td class="ok">Generally exempt</td><td>9 to 18 months</td></tr>
+      <tr><td><b>Fast-track merger</b> (s.233)</td><td>Shares</td><td>90% of shares, 9/10 of creditors by value, Regional Director</td><td class="ok">Yes</td><td>n/a (mostly internal)</td><td>3 to 6 months</td></tr>
+      <tr><td><b>Share purchase</b> (SPA)</td><td>Cash</td><td>Buyer and seller; CCI if large</td><td class="no">No, the seller pays capital gains</td><td class="no">Yes if a threshold is crossed</td><td>2 to 6 months</td></tr>
+      <tr><td><b>Preferential allotment</b></td><td>Shares or cash</td><td>Shareholders (special resolution), exchanges</td><td class="no">No, for an asset swap</td><td class="no">Yes if a threshold is crossed</td><td>1 to 3 months</td></tr>
+      <tr><td><b>Slump sale</b></td><td>Cash (lump sum)</td><td>Board and shareholders</td><td class="no">No (taxed, with special rules)</td><td>n/a</td><td>2 to 4 months</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section id="s4">
+  <div class="lesson"><span class="n">04</span><h2>The process, end to end</h2></div>
+  <p>The bars show a typical listed-company scheme in months. Switch on the overlay to see where Motherson's actual milestones fell. Click any phase to see who does what.</p>
+  <div class="box">
+    <div class="btns"><button class="btn" id="ganttOv" aria-pressed="false">Overlay Motherson's actual dates</button><button class="btn" id="ganttReplay">↻ Replay</button></div>
+    <div class="gantt" id="gantt"></div>
+    <div class="gdetail" id="gdetail"></div>
+  </div>
+  <div class="box bank"><span class="eyebrow">Two-motion structure in one line</span>
+    <p><b>First motion:</b> "Tribunal, please let us call meetings." <b>Second motion:</b> "Tribunal, the members voted yes. Please sanction the scheme." Between the two come the notices to regulators (30 days to respond) and the meetings.</p></div>
+</section>
+
+<section id="s5">
+  <div class="lesson"><span class="n">05</span><h2>The vote tests, with a calculator</h2></div>
+  <div class="grid2">
+    <div class="card"><h4>Companies Act test (s.230(6))</h4><p>Each class (shareholders, secured creditors, unsecured creditors) must approve by a <b>majority in number</b> of those voting, who also hold <b>three-fourths in value</b> of the votes cast.</p></div>
+    <div class="card"><h4>SEBI majority-of-minority</h4><p>For listed companies, where promoters or related parties benefit (for example a promoter entity merging in, or shares going to promoters), the <b>public shareholders' votes for must exceed their votes against</b>. Promoter votes don't count for this test.</p></div>
+    <div class="card"><h4>Who can object</h4><p>Only holders of <b>at least 10% of shares</b>, or creditors owed <b>at least 5% of total debt</b>, can object at the NCLT (s.230(4)). This stops tiny holders from blocking deals.</p></div>
+    <div class="card"><h4>Skipping meetings</h4><p>The NCLT can dispense with a creditors' meeting if creditors holding <b>90% in value</b> consent by affidavit (s.230(9)). It dispensed with creditor meetings in Motherson's case.</p></div>
+  </div>
+  <div class="box">
+    <span class="eyebrow">Vote calculator (illustrative numbers)</span>
+    <div class="vcalc">
+      <label class="ctl" for="vf">Shares voted FOR (all holders, mn)<input type="number" id="vf" value="2700"></label>
+      <label class="ctl" for="va">Shares voted AGAINST (all holders, mn)<input type="number" id="va" value="60"></label>
+      <label class="ctl" for="nf">Number of holders voting FOR<input type="number" id="nf" value="5200"></label>
+      <label class="ctl" for="na">Number of holders voting AGAINST<input type="number" id="na" value="310"></label>
+      <label class="ctl" for="pf">Public shares voted FOR (mn)<input type="number" id="pf" value="760"></label>
+      <label class="ctl" for="pa">Public shares voted AGAINST (mn)<input type="number" id="pa" value="4.3"></label>
+    </div>
+    <div class="checks" id="vchecks"></div>
+    <p class="note">Try making public AGAINST larger than public FOR. The scheme fails even though promoters vote 100% for it. That is the protection Motherson's minorities had (they actually voted 99.44% for).</p>
+  </div>
+</section>
+
+<section id="s6">
+  <div class="lesson"><span class="n">06</span><h2>The SEBI layer for listed companies</h2></div>
+  <p>A listed company can't go straight to the NCLT. It first files the draft scheme with the stock exchanges, which consult SEBI and issue an <b>observation letter</b> (no-objection). The rules are in SEBI's master circular on schemes of arrangement by listed entities (June 2023), which consolidated the earlier 2017 circular Motherson followed.</p>
+  <div class="grid2">
+    <div class="card"><h4>Documents filed</h4><p>Draft scheme; <b>valuation report</b> from a registered valuer; <b>fairness opinion</b> from a SEBI-registered merchant banker; <b>audit committee report</b>; report of the committee of <b>independent directors</b> (required since 2021); auditor's certificate on accounting; pre- and post-scheme shareholding; complaints report.</p></div>
+    <div class="card"><h4>Listing a demerged company</h4><p>The new company lists without an IPO, using a relaxation under Rule 19(2)(b) of the SCRR. It must publish an <b>information document</b>, not a DRHP. Ownership must largely mirror the parent, public holding must be at least 25%, and promoters' shares are locked in.</p></div>
+    <div class="card"><h4>Investor protection</h4><p>Majority-of-minority vote where promoters benefit; disclosure of valuation methods; a complaints window after filing; and exchange and SEBI comments that must be addressed before the NCLT.</p></div>
+    <div class="card"><h4>Price discovery</h4><p>On the ex-date of large demergers, exchanges can run a special pre-open session so the parent's price adjusts for the business that left. Jio Financial's 2023 demerger used one.</p></div>
+  </div>
+</section>
+
+<section id="s7">
+  <div class="lesson"><span class="n">07</span><h2>Tax and accounting</h2></div>
+  <div class="tbl"><table>
+    <thead><tr><th>Item</th><th>Merger / amalgamation</th><th>Demerger</th></tr></thead>
+    <tbody>
+      <tr><td>Income-tax definition</td><td><b>s.2(1B):</b> all assets and liabilities move, and holders of at least 75% in value become shareholders of the survivor</td><td><b>s.2(19AA):</b> all assets and liabilities of the undertaking move at book value, shares are issued proportionately, holders of at least 75% in value become shareholders, and it is a going concern</td></tr>
+      <tr><td>Tax for shareholders</td><td>Exempt under s.47; the old cost carries over to the new shares</td><td>Exempt under s.47; cost is split between parent and new company in proportion to net book value</td></tr>
+      <tr><td>Tax for companies</td><td>Transfer is not taxed; losses may carry forward under s.72A if conditions are met</td><td>Transfer is not taxed; losses linked to the undertaking can move</td></tr>
+      <tr><td>Accounting</td><td colspan="2">Ind AS 103. Group reorganisations like Motherson's are "common control" combinations, accounted at book values (pooling of interests, Appendix C) rather than fair value with goodwill.</td></tr>
+      <tr><td>Stamp duty</td><td colspan="2">Payable on the NCLT order under state stamp laws. It can be significant where land moves, which is one reason Motherson kept DWH's factory land and leased it to MSWIL instead.</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section id="s8">
+  <div class="lesson"><span class="n">08</span><h2>The four dates that confuse everyone</h2></div>
+  <div class="dates" id="dates"></div>
+  <p class="note">Hover or tap a marker. The appointed date can come <i>before</i> the effective date, which is why accounts get restated from an earlier date.</p>
+</section>
+
+<section id="s9">
+  <div class="lesson"><span class="n">09</span><h2>Swap ratio maker (any deal)</h2></div>
+  <p>Every merger ratio comes from the same idea: <b>value per share of the target ÷ value per share of the acquirer</b>. Enter any two companies' equity values and share counts.</p>
+  <div class="box">
+    <div class="vcalc">
+      <label class="ctl" for="ae">Acquirer equity value (₹ cr)<input type="number" id="ae" value="31930"></label>
+      <label class="ctl" for="as">Acquirer shares (mn)<input type="number" id="as" value="3157.9"></label>
+      <label class="ctl" for="te">Target equity value (₹ cr)<input type="number" id="te" value="24440"></label>
+      <label class="ctl" for="ts">Target shares (mn)<input type="number" id="ts" value="473.6"></label>
+      <label class="ctl" for="cx">Target's shares in acquirer to cancel (mn)<input type="number" id="cx" value="1055.8"></label>
+    </div>
+    <div class="out" id="srout" style="grid-template-columns:repeat(auto-fit,minmax(150px,1fr))"></div>
+    <p class="note">Prefilled with Motherson's numbers. Set "cancel" to 0 for a normal merger where the target doesn't own acquirer shares.</p>
+  </div>
+</section>
+
+<section id="s10">
+  <div class="lesson"><span class="n">10</span><h2>Four Indian deals side by side</h2></div>
+  <div class="gallery">
+    <div class="gcard"><span class="tag t-blue">Merger</span><h4>HDFC Ltd → HDFC Bank</h4><dl><dt>Ratio</dt><dd>42 bank shares : 25 HDFC</dd><dt>Effective</dt><dd>1 Jul 2023</dd></dl><p>The parent (which held about 21% of the bank) merged into the bank, and its own bank shares were cancelled. <b>Parallel:</b> exactly like SAMIL's MSSL stake being cancelled.</p></div>
+    <div class="gcard"><span class="tag t-green">Demerger</span><h4>Reliance → Jio Financial</h4><dl><dt>Ratio</dt><dd>1 : 1</dd><dt>Listed</dt><dd>Aug 2023</dd></dl><p>Financial services were demerged with mirror ownership, with a special price-discovery session on the ex-date. <b>Parallel:</b> the 1:1 mirror demerger, like MSWIL.</p></div>
+    <div class="gcard"><span class="tag t-green">Demerger</span><h4>ITC → ITC Hotels</h4><dl><dt>Ratio</dt><dd>1 hotels share : 10 ITC</dd><dt>Listed</dt><dd>Jan 2025</dd></dl><p>ITC kept about 40% and shareholders got about 60% directly. <b>Parallel:</b> the parent keeping a large stake, like Motherson keeping 33.4% of MSWIL.</p></div>
+    <div class="gcard"><span class="tag t-copper">Composite</span><h4>MSSL: demerger + holdco merger</h4><dl><dt>Ratios</dt><dd>1 : 1 and 51 : 10</dd><dt>Effective</dt><dd>Jan 2022</dd></dl><p>Two steps in one scheme, with order mattering. <a href="motherson.html">Open the Motherson case →</a></p></div>
+  </div>
+</section>
+
+<section id="s11">
+  <div class="lesson"><span class="n">11</span><h2>The banker's checklist</h2></div>
+  <p>Tick through it. This is roughly the work-plan an advisory team runs on any scheme.</p>
+  <div class="box"><div id="checklist" class="checklist"></div><div class="progress" id="clprog"></div></div>
+  <div class="box warn"><span class="eyebrow">Common pitfalls</span>
+    <ul class="plain">
+      <li><b>Valuation date at an extreme</b> (a peak or a trough) invites challenge. Consider a true-up or explain the projections clearly.</li>
+      <li><b>Forgetting the order of steps</b> in a composite scheme. A demerger mirrors ownership at that moment.</li>
+      <li><b>Under-communicating:</b> publish accretion and look-through analysis early, before the stock reacts badly.</li>
+      <li><b>Ignoring post-deal related-party flows</b> between the newly separated companies.</li>
+      <li><b>Missing a regulator:</b> RBI (for NBFCs and CICs), CCI, or sector regulators can each add months.</li>
+    </ul></div>
+</section>
+
+<section id="s12">
+  <div class="lesson"><span class="n">12</span><h2>Flashcards</h2></div>
+  <p>Tap a card to flip it.</p>
+  <div class="flash" id="flash"></div>
+</section>
+
+<section id="s13">
+  <div class="lesson"><span class="n">13</span><h2>Self-test</h2></div>
+  <div class="box"><div id="quiz"></div><div id="qscore" class="verdict mid" hidden></div></div>
+</section>
+
+<section id="s14">
+  <div class="lesson"><span class="n">14</span><h2>Nuances that separate good from great</h2></div>
+  <p>The details examiners and bankers like to probe. Each is small on its own; together they show you understand how a scheme actually runs.</p>
+  <div class="nuance"><div class="card"><h4>Fractional entitlements</h4><p>A ratio like 1 : 4 leaves odd holders with fractions. Schemes pool all fractions, a trustee sells them in the market, and holders get cash. A 1 : 1 ratio (Motherson, Jio Financial) avoids this entirely.</p><p><a class="go" href="practice.html#c-fractions" target="_blank" rel="noopener">Practise: fractions</a></p></div><div class="card"><h4>Tax cost and holding period</h4><p>Under s.49(2C)/(2D) your original cost is split between parent and new company in proportion to net book value moved. The holding period of the new shares includes the time you held the parent, so long-term status carries over.</p><p><a class="go" href="practice.html#c-ex-price-cost" target="_blank" rel="noopener">Practise: cost split</a></p></div><div class="card"><h4>F&amp;O contracts on the ex-date</h4><p>Exchanges adjust derivatives when a large demerger goes ex. For Motherson, existing futures and options were made to expire early (13 Jan 2022) and fresh contracts started on the ex-date.</p></div><div class="card"><h4>Price discovery on the ex-date</h4><p>For big demergers, exchanges can hold a special pre-open session so the parent's price resets cleanly for the business that left. Jio Financial's 2023 demerger used one.</p></div><div class="card"><h4>ESOPs and convertibles</h4><p>Outstanding options are adjusted so holders aren't hurt: typically the resulting company grants matching options, and exercise prices are split in the same way as the tax cost.</p></div><div class="card"><h4>Cross-holdings and treasury shares</h4><p>No company issues shares to itself: a parent's stake in a merging subsidiary is cancelled, and a target's holding in the acquirer is extinguished. Older Indian schemes sometimes parked such shares in a trust ("treasury shares"); regulators now discourage this, so cancellation is the clean route.</p><p><a class="go" href="practice.html#c-cross-holding" target="_blank" rel="noopener">Practise: cross-holdings</a></p></div><div class="card"><h4>Appointed date choices</h4><p>It can be a past date (to align accounts with a financial year) or tied to an event. MCA guidance (2019) says a date more than a year before filing needs justification. Motherson used 1 Apr 2021 for the demerger and "the day after the demerger completes" for the merger.</p></div><div class="card"><h4>No exit right for dissenters</h4><p>Unlike US appraisal rights, an Indian scheme gives dissenting shareholders no automatic cash-out. If the vote passes and the NCLT sanctions, they are bound. Only 10% shareholders or 5% creditors can even object.</p></div><div class="card"><h4>Observation letter has a shelf life</h4><p>The exchanges' no-objection is valid for a limited period (six months under SEBI's circular) for filing with the NCLT. Slow movers have to go back to the exchanges.</p></div><div class="card"><h4>Demerger vs slump sale vs hive-down</h4><p>A demerger hands shares to the parent's shareholders (tax-neutral if s.2(19AA) is met). A slump sale sells the business for cash (taxed). A hive-down moves it into a subsidiary the parent still owns, often as a first step before a later demerger or stake sale.</p></div><div class="card"><h4>Stamp duty and land</h4><p>Stamp duty is payable on the NCLT order under state laws and can be large where land moves. Leasing land to the new company instead (as Motherson did for MSWIL's plants) avoids transfer cost and delay on government-leased industrial plots.</p></div><div class="card"><h4>Contracts, licences and lenders</h4><p>Customer contracts, licences and permits must move with the undertaking. Lenders often have consent rights under loan covenants even when the NCLT dispenses with creditor meetings. Bankers start these conversations on day one.</p></div><div class="card"><h4>Related-party flows after a demerger</h4><p>Separated companies keep trading with each other. Caps, arm's-length pricing and annual audit committee review protect the new company's minorities. Motherson set caps such as components from Motherson ≤ 34.5% of MSWIL revenue and a management fee ≤ 1%.</p></div><div class="card"><h4>Regulators beyond SEBI and NCLT</h4><p>RBI for NBFCs and core investment companies (SAMIL was one), CCI for combinations above thresholds, IRDAI or TRAI in insurance or telecom, and FEMA rules for foreign shareholders receiving shares.</p></div><div class="card"><h4>Open offer exemption</h4><p>Shares acquired under an NCLT-sanctioned scheme are generally exempt from the SEBI takeover open offer (SAST Reg 10(1)(d)), provided conditions are met. This is why schemes are used to consolidate promoter holdings.</p><p><a class="go" href="practice.html#c-open-offer" target="_blank" rel="noopener">Practise: open offer check</a></p></div>
+  </div>
+</section>
+<section id="s15">
+  <div class="lesson"><span class="n">15</span><h2>The Indian demerger wave (pattern spotting)</h2></div>
+  <p>Since 2022 many Indian groups have split conglomerates into focused listed companies. Recognising the pattern helps you answer "why now?" questions.</p>
+  <div class="wave">
+    <div class="card"><span class="yr">2022</span><h4>Motherson → MSWIL</h4><p>JV-partner-driven demerger plus promoter holdco merger.</p></div>
+    <div class="card"><span class="yr">2023</span><h4>Reliance → Jio Financial</h4><p>1 : 1 demerger of financial services; special price-discovery session.</p></div>
+    <div class="card"><span class="yr">2023</span><h4>HDFC Ltd → HDFC Bank</h4><p>Parent merged into the bank (42 : 25); its bank stake cancelled.</p></div>
+    <div class="card"><span class="yr">2024</span><h4>Raymond → Raymond Lifestyle</h4><p>Consumer business separated from real estate and engineering.</p></div>
+    <div class="card"><span class="yr">2025</span><h4>ITC → ITC Hotels</h4><p>1 : 10 demerger; ITC kept about 40%.</p></div>
+    <div class="card"><span class="yr">2025</span><h4>Tata Motors → PV and CV companies</h4><p>Passenger and commercial vehicle businesses split into two listed companies.</p></div>
+  </div>
+  <div class="box bank"><span class="eyebrow">Why the wave?</span><p>Investors pay more for focused businesses than for conglomerates; separate companies can raise capital and do deals on their own terms; promoters can bring in partners at the business level; and schemes make the split tax-neutral. The risk, as MSWIL shows, is listing a "pure play" at a price that already assumes the re-rating.</p></div>
+</section>
+<section class="srcs">
+  <h3>Sources and notes</h3>
+  <p class="note">Based on the Companies Act 2013 (s.66, 230 to 234), the Income-tax Act definitions (s.2(1B), s.2(19AA), s.47, s.72A), Ind AS 103, and SEBI's scheme circulars (CFD/DIL3/CIR/2017/21 as used in Motherson's filing, consolidated in the June 2023 master circular). Deal facts are from company announcements as widely reported. Thresholds and procedures summarise the rules in plain language. Check the current text of the law before relying on specifics in an exam answer.</p>
+</section>
+</div>
+
+</main>
+<div class="pal" id="pal" hidden><div class="palbox" role="dialog" aria-label="Search"><input id="palIn" placeholder="Search sections, cases and pages…" autocomplete="off"><div class="pallist" id="palList"></div><div class="palhint">↑ ↓ move · Enter open · Esc close · Shortcuts: 1 to 4 pages, d theme</div></div></div>
+<button class="totop" id="totop" type="button" aria-label="Back to top">↑</button>
+<div class="toast" id="toast" role="status"></div>
+<footer class="foot"><span>Restructuring Academy · built for the IB course (Session 7: M&amp;A and Restructuring).</span><span><a href="index.html">Home</a> · <a href="motherson.html">Motherson</a> · <a href="schemes.html">Schemes 101</a> · <a href="practice.html">Practice Lab</a></span></footer>
+<script src="assets/schemes.js"></script><script src="assets/site.js"></script>
+</body></html>

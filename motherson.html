@@ -1,0 +1,568 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Motherson Case Masterclass</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="The Motherson 2020 restructuring explained, with maths and assignment answers.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..800&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="assets/site.css">
+</head><body data-page="motherson">
+<div class="appbar"><div class="in">
+  <a class="brand" href="index.html" style="text-decoration:none;color:inherit"><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><path d="M2 6c5 0 6 10 11 10s5-6 7-6" fill="none" stroke="var(--copper)" stroke-width="2.4" stroke-linecap="round"/><path d="M2 12c4 0 5-6 9-6s5 10 9 10" fill="none" stroke="var(--blue)" stroke-width="2.4" stroke-linecap="round"/></svg><span>Restructuring</span><span class="full">Academy</span></a>
+  <nav class="navlinks" aria-label="Pages"><a href="index.html">Home</a><a href="motherson.html" aria-current="page">Motherson case</a><a href="schemes.html">Schemes 101</a><a href="practice.html">Practice Lab</a></nav>
+  <div class="bar-right"><span class="donechip" id="doneChip"></span>
+    <button class="iconbtn" type="button" onclick="openPal()" aria-label="Search"><svg width="15" height="15" viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M11 11l3.5 3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><span class="lbl">Search</span><kbd>/</kbd></button>
+    <button class="iconbtn" type="button" id="themeBtn" onclick="cycleTheme()"></button></div>
+</div><div class="readbar" id="readbar"></div></div>
+<main>
+<div class="wrap">
+<header>
+  <div class="eyebrow">IB Course · Session 7 · Motherson Sumi WFH case</div>
+  <h1 style="margin-top:10px">Motherson Masterclass</h1>
+  <p class="lede">The 2020 Motherson restructuring explained from zero, in plain language, with animations you can replay and simulators you can play with. By the end you should be able to explain it on a whiteboard, defend it in class, and look at it the way a banker would.</p>
+  <svg class="herowires" viewBox="0 0 800 70" preserveAspectRatio="none" aria-hidden="true"><path d="M0 20 C120 5 200 45 320 25 S560 5 800 22" style="stroke:var(--copper)"/><path d="M0 38 C140 55 240 15 380 36 S600 60 800 38" style="stroke:var(--blue)"/><path d="M0 56 C100 40 260 66 400 52 S640 36 800 56" style="stroke:var(--green)"/></svg>
+  <nav class="jump" aria-label="Lessons">
+    <a href="#cheat"><span>★</span>Cheat sheet</a><a href="#calc"><span>∑</span>The maths</a>
+    <a href="#l1"><span>01</span>The story</a><a href="#l2"><span>02</span>Animation</a><a href="#l3"><span>03</span>Why demerge first</a>
+    <a href="#l4"><span>04</span>Rationale</a><a href="#l5"><span>05</span>The math</a><a href="#l6"><span>06</span>Swap simulator</a>
+    <a href="#l7"><span>07</span>Valuation</a><a href="#l8"><span>08</span>Scheme of arrangement</a><a href="#l9"><span>09</span>Stakeholders</a>
+    <a href="#l10"><span>10</span>Banker's view</a><a href="#l11"><span>11</span>Share price & mcap</a><a href="#l12"><span>12</span>Your shares</a>
+    <a href="#l13"><span>13</span>Verdict</a><a href="#l14"><span>14</span>Assignment</a><a href="#l15"><span>15</span>Teach it</a><a href="#l16"><span>16</span>Q&amp;A</a>
+    <a href="#l17"><span>17</span>Sir's likely questions</a><a href="#l18"><span>18</span>Questions to ask sir</a>
+  </nav>
+</header>
+
+<!-- CHEAT SHEET -->
+<section id="cheat" style="margin-top:40px">
+  <div class="lesson"><span class="n">★</span><h2>Cheat sheet</h2></div>
+  <p class="note">Everything on one screen. Market data is as of 16 Oct 2026 unless marked otherwise.</p>
+  <div class="box key">
+    <span class="eyebrow">The deal in one line</span>
+    <p>In one composite scheme, MSSL <b>demerged</b> its Indian wiring business into MSWIL (<b>1:1</b>), then <b>merged</b> the promoters' holding company SAMIL into itself (<b>51 MSSL shares for 10 SAMIL shares</b>). It was driven by JV partner Sumitomo. Announced 2 Jul 2020, effective Jan 2022, MSWIL listed 28 Mar 2022.</p>
+  </div>
+  <div class="cs">
+    <div class="csb"><h4>Ratios and shares</h4><dl>
+      <dt>Demerger</dt><dd>1 MSWIL : 1 MSSL</dd><dt>Merger</dt><dd>51 MSSL : 10 SAMIL</dd>
+      <dt>MSSL shares</dt><dd>3,157.9 → 4,517.6 mn</dd><dt>Cancelled</dt><dd>1,055.8 mn (SAMIL's)</dd>
+      <dt>New issued</dt><dd>2,415.4 mn</dd><dt>Net dilution</dt><dd>43%</dd></dl></div>
+    <div class="csb"><h4>Ownership of the main company</h4><dl>
+      <dt>Family</dt><dd>36.4% (mostly via SAMIL) → 50.4% direct</dd><dt>SWS</dt><dd>25.3% → 17.7% (9.7% by Mar 2024)</dd>
+      <dt>Public</dt><dd>38.3% → 31.9%*</dd><dt>MSWIL</dt><dd>Public 38.3 · SWS 25.3 · Motherson 33.4 · Family 3.0</dd></dl>
+      <p class="note">*Includes Sojitz and SAMIL staff (5.1%)</p></div>
+    <div class="csb"><h4>Valuation (31 Mar 2020)</h4><dl>
+      <dt>Method</dt><dd>SOTP: 50% DCF + 50% peer multiples, NAV 0%</dd>
+      <dt>MSSL ex-DWH</dt><dd>~₹101/sh = ₹31,930 cr</dd><dt>SAMIL</dt><dd>~₹516/sh = ₹24,440 cr</dd>
+      <dt>SAMIL ex-MSSL stake</dt><dd>₹13,765 cr</dd><dt>Valuers</dt><dd>PW&amp;Co, BSR, Incwert</dd>
+      <dt>Fairness</dt><dd>Axis, DSP Merrill (MSSL); Kotak (SAMIL)</dd></dl></div>
+    <div class="csb"><h4>Was it accretive?</h4><dl>
+      <dt>Public EBITDA</dt><dd>+3.1% (FY20), +11.3% (Q3 FY21)</dd><dt>EPS</dt><dd>₹1.70 → ₹1.84 (+8%)</dd>
+      <dt>Public's DWH</dt><dd>38.3% → 47.2%</dd><dt>Public's SMRP BV</dt><dd>19.5% → 26.8%</dd>
+      <dt>Vote</dt><dd>99.44% of public in favour</dd></dl></div>
+    <div class="csb"><h4>Then (2 Jul 2020)</h4><dl>
+      <dt>MSSL price</dt><dd>₹103.6</dd><dt>MSSL mcap</dt><dd>~₹32,700 cr</dd>
+      <dt>Reaction</dt><dd>−9% intraday, −5.3% close</dd><dt>COVID low</dt><dd>₹48.5 (24 Mar 2020)</dd>
+      <dt>Pre-split peak</dt><dd>₹234.8 (13 Jan 2022)</dd><dt>MSWIL listing</dt><dd>₹66 · ~₹20,800 cr</dd></dl></div>
+    <div class="csb"><h4>Now (16 Oct 2026)</h4><dl>
+      <dt>Motherson</dt><dd>₹160 · mcap ₹1,70,522 cr · P/E ~39 · 52w ₹101 to 173</dd>
+      <dt>MSWIL</dt><dd>₹35.43 · mcap ₹23,496 cr · P/E ~37 · ROCE ~44%</dd>
+      <dt>Bonuses</dt><dd>Motherson ×2.25, MSWIL ×2.1</dd>
+      <dt>1 old share</dt><dd>₹103.6 → ~₹434 (4.2x) vs Nifty 2.2x</dd></dl></div>
+    <div class="csb"><h4>FY26 financials</h4><dl>
+      <dt>Motherson rev</dt><dd>₹1,26,104 cr (+11%)</dd><dt>EBITDA</dt><dd>₹12,033 cr (9.5%)</dd>
+      <dt>PAT (normalised)</dt><dd>₹4,258 cr</dd><dt>Leverage</dt><dd>0.8x</dd>
+      <dt>MSWIL rev / PAT</dt><dd>₹11,478 cr / ₹625 cr</dd></dl></div>
+    <div class="csb"><h4>Key dates</h4><dl>
+      <dt>Board idea</dt><dd>30 Jan 2020</dd><dt>Announced</dt><dd>2 Jul 2020</dd><dt>Exchange NOCs</dt><dd>Dec 2020</dd>
+      <dt>Vote</dt><dd>29 Apr 2021</dd><dt>NCLT sanction</dt><dd>23 Dec 2021</dd><dt>Record date</dt><dd>17 Jan 2022</dd><dt>MSWIL listed</dt><dd>28 Mar 2022</dd></dl></div>
+  </div>
+  <h3>Peers: Indian auto component companies</h3>
+  <div class="tbl"><table>
+    <thead><tr><th>Company</th><th>What it makes</th><th class="num">Mcap (₹ cr)</th><th class="num">P/E</th></tr></thead>
+    <tbody>
+      <tr class="tot"><td>Samvardhana Motherson</td><td>Global modules, mirrors, wiring, diversified</td><td class="num">1,70,522</td><td class="num">~39</td></tr>
+      <tr><td>Bosch Ltd</td><td>Fuel systems, electronics (MNC subsidiary)</td><td class="num">~1,34,000</td><td class="num">~57</td></tr>
+      <tr><td>Bharat Forge</td><td>Forgings, defence, aerospace</td><td class="num">90,499</td><td class="num">~128</td></tr>
+      <tr><td>Uno Minda*</td><td>Lighting, switches, <b>wiring harness</b> (closest MSWIL rival)</td><td class="num">~70,800</td><td class="num">~73</td></tr>
+      <tr><td>Sona BLW (Sona Comstar)</td><td>Driveline, EV motors</td><td class="num">49,859</td><td class="num">~72</td></tr>
+      <tr class="tot"><td>MSWIL</td><td>Indian wiring harness (pure play)</td><td class="num">23,496</td><td class="num">~37</td></tr>
+    </tbody>
+  </table></div>
+  <p class="note">*Uno Minda data as of 21 Sep 2026; others 16 Oct 2026. Sources: Value Research, InCred Money, Screener, Finology. The takeaway: <b>both Motherson companies trade at a lower P/E than most Indian auto component peers.</b> For Motherson the market prices in global exposure, thin ~9.5% margins and acquisition risk. MSWIL has de-rated from about 51x at listing to about 37x as profit stalled. Global peers for Motherson: Magna, Forvia, Valeo, Plastic Omnium.</p>
+</section>
+
+<section id="calc">
+<div class="lesson"><span class="n">∑</span><h2>The Motherson maths, step by step</h2></div>
+<p>Every number in the case, in the order a banker would build it. Each step links to a Practice Lab case (opens in a new tab) that drills the same logic with fresh numbers.</p>
+<div class="msteps"><div class="mstep"><span class="mn">1</span><div><h4>Value one share of each company</h4><div class="fx">MSSL ex-DWH: 50% × DCF + 50% × CCM   |   SAMIL: 50% × DCF + 50% × CCM</div><div class="res">MSSL ex-DWH ≈ ₹101 · SAMIL ≈ ₹516</div><p class="why">Three valuers (PW&amp;Co, BSR, Incwert) each did this; NAV was calculated but weighted 0%.</p><div class="links"><a class="go" href="practice.html#c-valuer-weights" target="_blank" rel="noopener">Practise: valuer table → ratio</a></div></div></div><div class="mstep"><span class="mn">2</span><div><h4>Swap ratio</h4><div class="fx">₹516 ÷ ₹101 = 5.10   →   ×10 = 51 : 10</div><div class="res">51 MSSL shares for 10 SAMIL shares</div><p class="why">Face values (₹10 SAMIL vs ₹1 MSSL) don't enter the ratio; only value per share does.</p><div class="links"><a class="go" href="practice.html#c-face-value" target="_blank" rel="noopener">Practise: face value trap</a><a class="go" href="practice.html#c-merger-basic" target="_blank" rel="noopener">Practise: basic ratio</a></div></div></div><div class="mstep"><span class="mn">3</span><div><h4>What SAMIL is worth (sum of the parts)</h4><div class="fx">₹516 × 473.6 mn ÷ 10 = ₹24,440 cr  =  ₹10,675 cr (33.43% of MSSL) + ₹13,765 cr (everything else, net of debt)</div><div class="res">₹13,765 cr is the number to debate</div><p class="why">The "everything else" is 49% of SMRP BV + 33.43% of DWH + ~28 businesses − SAMIL's net debt, each valued as stake % × (EV − that business's debt).</p><div class="links"><a class="go" href="practice.html#c-sotp-ev" target="_blank" rel="noopener">Practise: SOTP from EV</a><a class="go" href="practice.html#c-holdco-discount" target="_blank" rel="noopener">Practise: holdco discount</a></div></div></div><div class="mstep"><span class="mn">4</span><div><h4>Share count bridge</h4><div class="fx">3,157.9 − 1,055.8 (SAMIL's MSSL shares cancelled) + 473.6 × 5.1 = 2,415.4 (new)</div><div class="res">4,517.6 mn shares · 43% more than before</div><p class="why">A company can't own itself, so SAMIL's stake is cancelled, not re-issued.</p><div class="links"><a class="go" href="practice.html#c-holdco-cancel" target="_blank" rel="noopener">Practise: holdco merger</a><a class="go" href="practice.html#c-cross-holding" target="_blank" rel="noopener">Practise: cross-holdings</a></div></div></div><div class="mstep"><span class="mn">5</span><div><h4>Who owns the merged company</h4><div class="fx">Family: (93.2 + 90.4% × 2,415.4) ÷ 4,517.6   ·   SWS: 800.3 ÷ 4,517.6   ·   Public: 1,208.6 ÷ 4,517.6</div><div class="res">Family 50.4% · Public 26.8% · SWS 17.7% · Sojitz+staff 5.1%</div><p class="why">At 5.1 the family lands just over 50%. Try the ratio where it crosses exactly 50%.</p><div class="links"><a class="go" href="practice.html#c-control-threshold" target="_blank" rel="noopener">Practise: control threshold</a></div></div></div><div class="mstep"><span class="mn">6</span><div><h4>The demerger (step 1) and why it came first</h4><div class="fx">MSWIL shares = MSSL shares × 1   →   SWS 25.3% · SAMIL 33.4% (→ Motherson) · Public 38.3% · Family 3.0%</div><div class="res">Merge-first would give SWS only ~17.7% of MSWIL</div><p class="why">A demerger mirrors the shareholding on the record date, so the sequence decides MSWIL's owners.</p><div class="links"><a class="go" href="practice.html#c-mirror-demerger" target="_blank" rel="noopener">Practise: mirror demerger</a><a class="go" href="practice.html#c-composite-demerge-merge" target="_blank" rel="noopener">Practise: demerge → merge</a><a class="go" href="practice.html#c-composite-merge-first" target="_blank" rel="noopener">Practise: merge → demerge</a></div></div></div><div class="mstep"><span class="mn">7</span><div><h4>Look-through: what each party really owns</h4><div class="fx">Public in SMRP BV: 38.3% × 51% = 19.5%   →   26.75% × 100% = 26.8%   ·   Public in DWH: 38.3% + 26.75% × 33.4% = 47.2%</div><div class="res">Public gains in SMRP BV, DWH and SAMIL businesses</div><p class="why">Diluted only in "other MSSL" (38.3% → 26.8%). The family's DWH look-through falls to ~19.8%.</p><div class="links"><a class="go" href="practice.html#c-lookthrough" target="_blank" rel="noopener">Practise: three-level look-through</a></div></div></div><div class="mstep"><span class="mn">8</span><div><h4>Fairness check and sensitivity</h4><div class="fx">(₹31,930 cr + ₹13,765 cr) ÷ 4,517.6 mn × 10 = ₹101 per share (unchanged)</div><div class="res">Every ₹1,000 cr of SAMIL overvaluation costs the public ~₹268 cr</div><p class="why">Zero-sum: a ratio that is too high moves value from public to promoter.</p><div class="links"><a class="go" href="practice.html#c-value-leak" target="_blank" rel="noopener">Practise: value leakage</a></div></div></div><div class="mstep"><span class="mn">9</span><div><h4>EPS accretion (Q3 FY21 pro forma)</h4><div class="fx">Before: ₹537 cr ÷ 3,157.9 mn × 10 = ₹1.70   →   After: ₹830 cr ÷ 4,517.6 mn × 10 = ₹1.84</div><div class="res">+8% accretive (43% more shares, 55% more profit)</div><p class="why">On FY20 numbers it was dilutive because SMRP BV's new plants were loss-making.</p><div class="links"><a class="go" href="practice.html#c-eps" target="_blank" rel="noopener">Practise: EPS accretion</a><a class="go" href="practice.html#c-eps-breakeven" target="_blank" rel="noopener">Practise: breakeven ratio</a></div></div></div><div class="mstep"><span class="mn">10</span><div><h4>Ex-date price (14 Jan 2022)</h4><div class="fx">₹234.8 (with DWH) − ₹187.6 (ex-DWH) = ₹47.2 per share of DWH value</div><div class="res">Market valued DWH at ~₹14,900 cr on the ex-date; it listed at ₹66 (~₹20,800 cr)</div><p class="why">Your tax cost is split between MSSL and MSWIL in proportion to net book value moved.</p><div class="links"><a class="go" href="practice.html#c-ex-price-cost" target="_blank" rel="noopener">Practise: ex-price and cost split</a><a class="go" href="practice.html#c-fractions" target="_blank" rel="noopener">Practise: fractional entitlements</a></div></div></div><div class="mstep"><span class="mn">11</span><div><h4>A shareholder's return to Oct 2026</h4><div class="fx">1 MSSL share → 1 Motherson + 1 MSWIL → bonuses → 2.25 × ₹160 + 2.1 × ₹35.43</div><div class="res">₹103.6 → ~₹434 (4.2x) vs Nifty ~2.2x</div><p class="why">Bonus adjustments: Motherson ×1.5 ×1.5; MSWIL ×1.4 ×1.5.</p><div class="links"><a class="go" href="practice.html#c-bonus-returns" target="_blank" rel="noopener">Practise: tracking a holding</a></div></div></div><div class="mstep"><span class="mn">12</span><div><h4>The vote</h4><div class="fx">Companies Act: ≥ 75% by value   +   SEBI majority of minority: public FOR > public AGAINST</div><div class="res">99.44% of public votes in favour</div><p class="why">Promoters can carry the first test; only the public decides the second.</p><div class="links"><a class="go" href="practice.html#c-vote" target="_blank" rel="noopener">Practise: vote tests</a><a class="go" href="practice.html#c-open-offer" target="_blank" rel="noopener">Practise: open offer check</a></div></div></div>
+</div>
+<div class="box bank"><span class="eyebrow">Run it yourself</span><p>Change the ratio and SAMIL's asset value in the <a href="#l6">swap simulator</a>, or use the Merger Calc tab of the Excel workbook to rebuild every line above.</p></div>
+</section>
+<!-- 1 STORY -->
+<section id="l1">
+  <div class="lesson"><span class="n">01</span><h2>The story, in plain words</h2></div>
+  <p>Start with an analogy and the real names will follow.</p>
+  <div class="box key">
+    <span class="eyebrow">The two-shop analogy</span>
+    <p>You (the Sehgal family) and a Japanese friend (Sumitomo, called SWS) open a <b>wiring shop</b> together in 1986. That shop is <b>MSSL</b>. You put it on the stock market, so the public owns a piece too.</p>
+    <p>The shop does well and starts buying big businesses in Europe: car mirrors, bumpers and door panels. But when it buys the biggest one (<b>SMRP BV</b>), the shop takes only <b>half (51%)</b>. Your own private family company, <b>SAMIL</b>, takes the other <b>half (49%)</b>. SAMIL also owns about 28 other small businesses and holds your 33% stake in the shop.</p>
+    <p>By 2020 everyone is unhappy:</p>
+    <ul class="plain">
+      <li><b>Your Japanese friend</b> says: "I joined for wires in India. Why am I a part-owner of German bumper factories?"</li>
+      <li><b>The public</b> says: "Why does the shop own only half the best business? Why does the family keep the other half privately? Whose side are you on?"</li>
+      <li><b>You</b> want one clean, big listed company that you clearly control and can grow.</li>
+    </ul>
+    <p><b>The fix comes in two moves.</b> First, cut the Indian wiring business out into its own shop (<b>MSWIL</b>), so the Japanese friend owns a direct slice of exactly what he wants. Second, pour your private family company (<b>SAMIL</b>) into the main shop, so the main shop owns 100% of everything else and you own your stake directly.</p>
+  </div>
+  <h3>Six names to remember</h3>
+  <div class="grid2">
+    <div class="card"><h4>MSSL</h4><p>Motherson Sumi Systems. The listed main company. Later renamed <b>Samvardhana Motherson International</b>.</p></div>
+    <div class="card"><h4>SAMIL</h4><p>The Sehgal family's private holding company. Unlisted. It owned 33.4% of MSSL and 49% of SMRP BV.</p></div>
+    <div class="card"><h4>SWS</h4><p>Sumitomo Wiring Systems, Japan. JV partner since 1986, with a 25.3% stake in MSSL.</p></div>
+    <div class="card"><h4>SMRP BV</h4><p>The European mirrors, bumpers and interiors business. The biggest earner, split 51% MSSL and 49% SAMIL.</p></div>
+    <div class="card"><h4>DWH</h4><p>Domestic Wiring Harness: wires for Indian vehicles. The original business and SWS's favourite.</p></div>
+    <div class="card"><h4>MSWIL</h4><p>Motherson Sumi Wiring India. The new company created to hold DWH.</p></div>
+  </div>
+</section>
+
+<!-- 2 ANIMATION -->
+<section id="l2">
+  <div class="lesson"><span class="n">02</span><h2>Watch it happen</h2></div>
+  <p>Each <b>white box</b> is a company. Each <b>coloured block</b> is a business or a stake it owns. The <b>chips on top</b> show who owns that company. Press play, or step through one move at a time.</p>
+  <div class="box">
+    <div class="btns">
+      <button class="btn primary" id="play">▶ Play all</button>
+      <button class="btn" data-st="0">Before</button>
+      <button class="btn" data-st="1">Move 1: Demerger</button>
+      <button class="btn" data-st="2">Move 2: Merger</button>
+      <button class="btn" data-st="3">After</button>
+    </div>
+    <div class="progress" id="prog"><i></i><i></i><i></i><i></i></div>
+    <div class="stage-scroll"><div class="stage" id="stage" role="img" aria-label="Animated ownership diagram"></div></div>
+    <div class="legend">
+      <span><i class="sw" style="background:var(--green)"></i>Indian wiring (DWH)</span>
+      <span><i class="sw" style="background:var(--blue)"></i>Other MSSL businesses</span>
+      <span><i class="sw" style="background:var(--copper)"></i>SMRP BV (Europe)</span>
+      <span><i class="sw" style="background:var(--yellow)"></i>SAMIL's 28 businesses</span>
+      <span><i class="sw" style="background:var(--muted)"></i>Shares of another company</span>
+      <span><i class="sw" style="border:2px dashed var(--yellow)"></i>Unlisted company</span>
+    </div>
+    <div class="narr" id="narr"></div>
+  </div>
+</section>
+
+<!-- 3 WHY DEMERGE FIRST -->
+<section id="l3">
+  <div class="lesson"><span class="n">03</span><h2>Why demerge first, then merge?</h2></div>
+  <p>This is the question sir will most likely ask. The short answer: <b>the order decides who ends up owning the Indian wiring company.</b> A demerger hands out shares of the new company to whoever owns MSSL <i>at that moment</i>, in the same proportions (a "mirror"). So the real question is: whose ownership do you want to copy?</p>
+  <ul class="plain">
+    <li><b>Demerge first</b> (what they did): copy MSSL's <i>old</i> ownership. SWS gets its full 25.3%, the public 38.3%, and SAMIL 33.4%. SAMIL's 33.4% then flows into the main company when SAMIL merges in.</li>
+    <li><b>Merge first</b> (the alternative): SAMIL merges in, and the family's stake jumps to about 50% while SWS is diluted to about 18%. Copying <i>that</i> ownership into the wiring company would hand the family half the wiring company and shrink SWS's stake in its favourite business.</li>
+  </ul>
+  <div class="box">
+    <div class="btns"><span class="note" style="margin-right:6px">Who owns the new wiring company (MSWIL)?</span>
+      <button class="btn" id="ordA" aria-pressed="true">Demerge first (actual)</button>
+      <button class="btn" id="ordB" aria-pressed="false">Merge first (alternative)</button></div>
+    <div class="bars">
+      <div class="barrow"><div class="lab">MSWIL owners</div><div class="stack" id="ordbar"></div></div>
+    </div>
+    <div class="legend"><span><i class="sw s-pub"></i>Public</span><span><i class="sw s-sws"></i>SWS</span><span><i class="sw s-fam"></i>Sehgal family (direct)</span><span><i class="sw s-par"></i>Main listed company (Motherson)</span><span><i class="sw s-sj"></i>Sojitz + SAMIL staff</span></div>
+    <div id="ordtext" class="tbl"></div>
+  </div>
+  <div class="box key"><span class="eyebrow">Four reasons the order had to be "demerge, then merge"</span>
+    <ol class="plain">
+      <li><b>It protects SWS's stake in DWH.</b> The whole deal was driven by SWS. Demerging first gives SWS 25.3% of the wiring company. Merging first would cut that to about 17.7%, which defeats the purpose.</li>
+      <li><b>It keeps the wiring company inside the group.</b> With demerger first, SAMIL's 33.4% of MSWIL moves into the main listed company. Motherson keeps a share of DWH's high-return cash flows (55% ROCE) and stays MSWIL's anchor shareholder.</li>
+      <li><b>It stops the promoters taking a bigger direct slice of DWH.</b> Merging first would leave the family owning about 50% of DWH directly. Instead, their look-through stake actually <i>falls</i> to about 20%.</li>
+      <li><b>It makes the valuation cleaner.</b> Once DWH is out, the valuers only need to compare two things: MSSL without DWH vs SAMIL. DWH is split 1:1 to everyone first, so nobody can argue about its price inside the swap ratio.</li>
+    </ol>
+  </div>
+  <div class="box warn"><span class="eyebrow">Why not just do one of the two?</span>
+    <ul class="plain">
+      <li><b>Only the demerger?</b> SWS is happy, but SMRP BV is still split 51/49 and SAMIL's 28 businesses stay outside. The minority shareholders' problem is unsolved.</li>
+      <li><b>Only the merger?</b> Minorities are happy, but DWH stays buried inside a huge global company and SWS is simply diluted from 25% to 18% of businesses it never wanted. The JV partner walks away unhappy.</li>
+      <li><b>Both, in this order,</b> is the only sequence that satisfies all three parties at once. That is what makes it a "composite" scheme: two steps, one approval.</li>
+    </ul>
+  </div>
+  <div class="box say"><span class="eyebrow">Say it in one line</span>
+    <p>"A demerger copies the parent's shareholding at that moment. They demerged first so the wiring company copied the <i>old</i> shareholding, which gave SWS its full 25% and kept 33% inside the group. Then they merged SAMIL in to fix the main company."</p></div>
+</section>
+
+<!-- 4 RATIONALE -->
+<section id="l4">
+  <div class="lesson"><span class="n">04</span><h2>The strategic rationale for each move</h2></div>
+  <div class="grid2">
+    <div class="box"><span class="eyebrow">Move 1 · Demerger of DWH</span>
+      <h3>Why carve out Indian wiring?</h3>
+      <ul class="plain">
+        <li><b>JV partner's demand.</b> The press release calls it SWS's "long-standing request" to focus on Indian wiring.</li>
+        <li><b>Different business, different DNA.</b> DWH: India only, about 55% ROCE, low capex, net cash. The rest: global, capex-heavy, acquisitive, around 8% EBITDA margin. Investors value them differently, so hiding a gem inside a big group lowers its value.</li>
+        <li><b>Management focus.</b> DWH gets its own board, CEO and capital decisions.</li>
+        <li><b>Investor choice.</b> Investors can choose a pure India story (MSWIL), a global story (Motherson), or both.</li>
+        <li><b>Continuity.</b> Supply, technology and lease agreements keep the old benefits flowing (Lesson 09).</li>
+      </ul></div>
+    <div class="box"><span class="eyebrow">Move 2 · Merger of SAMIL</span>
+      <h3>Why fold the family company in?</h3>
+      <ul class="plain">
+        <li><b>100% of SMRP BV.</b> All of its future profit goes to listed shareholders, not 51%.</li>
+        <li><b>No more "two pockets".</b> The family no longer has businesses outside the listed company, which removes conflict of interest and the holding company discount.</li>
+        <li><b>A bigger product range.</b> Lighting, HVAC, shock absorbers, metal parts and IT come in, supporting the 3CX10 diversification rule.</li>
+        <li><b>Synergies.</b> SAMIL's shared services (IT, logistics, travel, legal) come in-house.</li>
+        <li><b>Growth platform.</b> One large listed balance sheet can raise debt and equity for acquisitions (Vision 2025).</li>
+        <li><b>EPS accretive</b> in year one, as promised.</li>
+      </ul></div>
+  </div>
+  <div class="box bank"><span class="eyebrow">Banker's framing: "Simplify · Align · Grow"</span>
+    <p>This is how the company sold it, and how you should structure any restructuring pitch. <b>Simplify</b> the structure (remove the holding company layer and the 51/49 split). <b>Align</b> every stakeholder's interest (SWS with DWH, promoters with minorities). <b>Grow</b> through a stronger platform (capital raising, M&amp;A). Every slide in the investor deck maps to one of these three words.</p></div>
+</section>
+
+<!-- 5 MATH -->
+<section id="l5">
+  <div class="lesson"><span class="n">05</span><h2>The math, slowly</h2></div>
+  <h3>Move 1: the demerger is just "1 for 1"</h3>
+  <div class="box">
+    <p>If you held <b>100 MSSL shares</b>, you got <b>100 MSWIL shares</b> as well. You still had your 100 MSSL shares, but MSSL no longer owned the wiring business. Your ₹ value is split across two pieces of paper instead of one.</p>
+    <p><b>Why 1:1 is automatically fair:</b> every shareholder gets the same ratio, so everyone's percentage of every business stays the same. 1:2 or 5:1 would be equally fair, because only the price per share would change. 1:1 is simply the cleanest, so MSWIL also has 3,157.9 mn shares.</p>
+  </div>
+  <h3>Move 2: the merger, in four lines</h3>
+  <div class="tbl"><table>
+    <thead><tr><th>Line</th><th>What happens</th><th class="num">Shares (mn)</th></tr></thead>
+    <tbody>
+      <tr><td>A</td><td>MSSL shares before</td><td class="num">3,157.9</td></tr>
+      <tr><td>B</td><td>Cancel SAMIL's own MSSL shares (33.43%). A company can't own itself after merging.</td><td class="num">− 1,055.8</td></tr>
+      <tr><td>C</td><td>Issue new shares to SAMIL's owners: 473.6 mn SAMIL shares × 5.1</td><td class="num">+ 2,415.4</td></tr>
+      <tr class="tot"><td>A−B+C</td><td>Merged company shares</td><td class="num">4,517.6</td></tr>
+    </tbody>
+  </table></div>
+  <p>Net new shares = 2,415.4 − 1,055.8 = <b>1,359.7 mn</b>, which is <b>43% more shares</b> than before. That is the "dilution" analysts talked about. But the company also gets a lot more stuff (49% of SMRP BV, 28 businesses, 33% of MSWIL), so what matters is whether value per share went up.</p>
+  <h3>Who owns what, before and after</h3>
+  <div class="box">
+    <div class="btns"><button class="btn" id="own0" aria-pressed="true">Before</button><button class="btn" id="own1" aria-pressed="false">After</button></div>
+    <div class="bars">
+      <div class="barrow"><div class="lab">Main company</div><div class="stack" id="ownMain"></div></div>
+      <div class="barrow"><div class="lab">Wiring co (MSWIL)</div><div class="stack" id="ownWire"></div></div>
+    </div>
+    <div class="legend"><span><i class="sw s-pub"></i>Public</span><span><i class="sw s-sws"></i>SWS</span><span><i class="sw s-fam"></i>Family direct</span><span><i class="sw s-par"></i>SAMIL / Motherson</span><span><i class="sw s-sj"></i>Sojitz + SAMIL staff</span></div>
+  </div>
+  <div class="tbl"><table>
+    <thead><tr><th>Holder</th><th class="num">Before: shares</th><th class="num">%</th><th class="num">After: shares</th><th class="num">%</th><th>Working</th></tr></thead>
+    <tbody>
+      <tr><td>Sehgal family</td><td class="num">93.2</td><td class="num">2.95%</td><td class="num">2,276.8</td><td class="num up">50.4%</td><td>93.2 + 90.4% × 2,415.4</td></tr>
+      <tr><td>SAMIL</td><td class="num">1,055.8</td><td class="num">33.43%</td><td class="num">0</td><td class="num">0%</td><td>Cancelled</td></tr>
+      <tr><td>SWS</td><td class="num">800.3</td><td class="num">25.34%</td><td class="num">800.3</td><td class="num down">17.7%</td><td>800.3 ÷ 4,517.6</td></tr>
+      <tr><td>Public</td><td class="num">1,208.6</td><td class="num">38.27%</td><td class="num">1,208.6</td><td class="num down">26.75%</td><td>1,208.6 ÷ 4,517.6</td></tr>
+      <tr><td>Sojitz + SAMIL staff</td><td class="num">0</td><td class="num">0%</td><td class="num">231.9</td><td class="num">5.1%</td><td>9.6% × 2,415.4</td></tr>
+      <tr class="tot"><td>Total</td><td class="num">3,157.9</td><td class="num">100%</td><td class="num">4,517.6</td><td class="num">100%</td><td></td></tr>
+    </tbody>
+  </table></div>
+  <h3>The look-through test: what does each person really own?</h3>
+  <p>The % in the main company alone can mislead. The real question is: <b>what slice of each business do you own</b>, directly plus through companies you hold? (Public numbers are from the company FAQ; family and SWS are my calculations.)</p>
+  <div class="tbl"><table>
+    <thead><tr><th>Business</th><th class="num">Public before → after</th><th class="num">Family before → after</th><th class="num">SWS before → after</th></tr></thead>
+    <tbody>
+      <tr><td>Indian wiring (DWH)</td><td class="num">38.3% → <span class="up">47.2%</span></td><td class="num">33.2% → <span class="down">19.8%</span></td><td class="num">25.3% → <span class="up">31.3%</span></td></tr>
+      <tr><td>SMRP BV (Europe)</td><td class="num">19.5% → <span class="up">26.8%</span></td><td class="num">61.2% → <span class="down">50.4%</span></td><td class="num">12.9% → <span class="up">17.7%</span></td></tr>
+      <tr><td>Other MSSL businesses</td><td class="num">38.3% → <span class="down">26.8%</span></td><td class="num">33.2% → <span class="up">50.4%</span></td><td class="num">25.3% → <span class="down">17.7%</span></td></tr>
+      <tr><td>SAMIL's 28 businesses</td><td class="num">0% → <span class="up">26.8%</span></td><td class="num">90.4% → <span class="down">50.4%</span></td><td class="num">0% → <span class="up">17.7%</span></td></tr>
+    </tbody>
+  </table></div>
+  <p class="note">How to read one cell: the public's DWH stake after = 38.3% directly in MSWIL + 26.75% × 33.4% through Motherson = 38.3 + 8.9 = 47.2%.</p>
+  <div class="box key"><span class="eyebrow">Did the public win? The company's two tests</span>
+    <ul class="plain">
+      <li><b>EBITDA test (FY20):</b> multiply each look-through % by that business's EBITDA. The public's share goes from ₹1,587 cr to ₹1,635 cr, <b>+3.1%</b>. On Q3 FY21 numbers it is +11.3%.</li>
+      <li><b>EPS test (Q3 FY21 pro forma):</b> before, ₹537 cr profit ÷ 3,157.9 mn shares = <b>₹1.70</b>. After, ₹830 cr ÷ 4,517.6 mn shares = <b>₹1.84</b>. That is <b>+8% accretive</b>: 43% more shares, but 55% more profit.</li>
+    </ul></div>
+</section>
+
+<!-- 6 SIM -->
+<section id="l6">
+  <div class="lesson"><span class="n">06</span><h2>Swap ratio simulator</h2></div>
+  <p>The ratio was 51 MSSL shares for 10 SAMIL shares (5.1). Move the sliders and see what changes. The first slider is the ratio. The second is <b>what SAMIL's assets are really worth</b>, excluding its MSSL shares. The valuers said ₹13,765 cr. If you think that is too high or too low, slide it.</p>
+  <div class="box">
+    <div class="sim">
+      <div style="display:grid;gap:14px">
+        <label class="ctl" for="r">Swap ratio: MSSL shares per 1 SAMIL share <b id="rv">5.10</b><input type="range" id="r" min="2.2" max="6.5" step="0.05" value="5.1"></label>
+        <label class="ctl" for="v">True value of SAMIL's non-MSSL assets (₹ cr) <b id="vv">13,765</b><input type="range" id="v" min="0" max="19000" step="250" value="13765"></label>
+        <div class="btns"><button class="btn" id="reset">Reset to actual deal</button></div>
+        <div class="verdict" id="verdict"></div>
+      </div>
+      <div class="out" id="simout"></div>
+    </div>
+    <div class="bars"><div class="barrow"><div class="lab">Merged company</div><div class="stack" id="simbar"></div></div></div>
+    <p class="note">Fixed inputs from the valuation reports and FAQs: MSSL ex-DWH worth ₹31,930 cr (₹101.1 per share); public held 1,208.6 mn shares worth ₹12,220 cr before; merged Q3 FY21 pro forma profit ₹830 cr. "Fair ratio" is the ratio at which public holders neither gain nor lose under your value assumption. The ratio can't sensibly go below ~2.23: that is SAMIL's 1,055.8 mn MSSL shares ÷ 473.6 mn SAMIL shares, i.e. SAMIL's other assets valued at zero.</p>
+  </div>
+  <div class="box say"><span class="eyebrow">What the simulator teaches</span>
+    <p>A swap ratio is just a <b>price</b>, paid in shares instead of cash. If it is too high, the family gets too many shares and value leaks from the public to the promoters. If it is too low, the opposite. Each ₹1,000 cr that SAMIL's assets are overvalued moves about <b>₹268 cr</b> from public holders to SAMIL's owners. The ratio also nearly decides control: at 5.1, the family lands just above 50%.</p></div>
+</section>
+
+<!-- 7 VALUATION -->
+<section id="l7">
+  <div class="lesson"><span class="n">07</span><h2>How 5.1 was decided</h2></div>
+  <p>Three independent valuers each valued <b>one MSSL share (without DWH)</b> and <b>one SAMIL share</b>, then divided the two. Think of it like comparing the price of a kilo of apples and a kilo of mangoes: you only need the <i>relative</i> price to know how many apples buy one mango.</p>
+  <div class="tbl"><table>
+    <thead><tr><th>Valuer</th><th class="num">MSSL ex-DWH (₹/share)</th><th class="num">SAMIL (₹/share)</th><th class="num">SAMIL ÷ MSSL</th></tr></thead>
+    <tbody>
+      <tr><td>Price Waterhouse &amp; Co</td><td class="num">100.51</td><td class="num">512.81</td><td class="num">5.10</td></tr>
+      <tr><td>BSR &amp; Associates</td><td class="num">101.81</td><td class="num">519.27</td><td class="num">5.10</td></tr>
+      <tr><td>Incwert (registered valuer)</td><td class="num">101</td><td class="num">516</td><td class="num">5.11</td></tr>
+      <tr class="tot"><td>Final ratio</td><td></td><td></td><td class="num">51 : 10</td></tr>
+    </tbody>
+  </table></div>
+  <div class="grid2">
+    <div class="card"><h4>Method: sum of the parts</h4><p>Value every business separately (DWH, SMRP BV, export wiring, each SAMIL JV), then add them up and subtract debt. Used because the businesses are very different from each other.</p></div>
+    <div class="card"><h4>50% DCF</h4><p>Discount five years of projected cash flow (FY21 to FY25). This captures the expected recovery of SMRP BV's new plants.</p></div>
+    <div class="card"><h4>50% peer multiples</h4><p>What similar listed companies trade at (EV/EBITDA, P/E). This anchors the value to the market.</p></div>
+    <div class="card"><h4>0% book value</h4><p>Calculated (₹34 vs ₹148) but ignored, because these are running businesses, not companies being liquidated.</p></div>
+  </div>
+  <h3>Turning per-share values into ₹ crore</h3>
+  <div class="tbl"><table>
+    <tbody>
+      <tr><td>SAMIL total value: ₹516 × 473.6 mn shares</td><td class="num">₹24,440 cr</td></tr>
+      <tr><td>Of which: its 33.43% of MSSL ex-DWH (1,055.8 mn × ₹101)</td><td class="num">₹10,675 cr</td></tr>
+      <tr class="tot"><td>Value put on everything else SAMIL brings (49% SMRP + 33% DWH + 28 businesses − debt)</td><td class="num">₹13,765 cr</td></tr>
+      <tr><td>MSSL ex-DWH total value: ₹101 × 3,157.9 mn</td><td class="num">₹31,930 cr</td></tr>
+      <tr><td>Merged value ₹45,695 cr ÷ 4,517.6 mn shares</td><td class="num">₹101 / share (unchanged ✓)</td></tr>
+    </tbody>
+  </table></div>
+  <div class="box bank"><span class="eyebrow">Banker's view: valuer vs fairness opinion</span>
+    <p>The <b>valuer</b> (PwC, BSR, Incwert) recommends the ratio. A <b>merchant banker</b> then gives a <b>fairness opinion</b> saying "this ratio is fair, from a financial point of view, to the shareholders". Axis Capital and DSP Merrill Lynch (BofA) gave opinions to MSSL, and Kotak to SAMIL. One detail worth quoting: DSP Merrill's opinion says the ratio is fair to MSSL holders <b>"other than SAMIL and the Sehgal family"</b>. That is exactly the group a fairness opinion should protect in a promoter deal.</p></div>
+</section>
+
+<!-- 8 SCHEME -->
+<section id="l8">
+  <div class="lesson"><span class="n">08</span><h2>The scheme of arrangement journey</h2></div>
+  <p>A <b>scheme of arrangement</b> (Companies Act 2013, Sections 230 to 232) is a court-approved plan to reorganise companies. Once the NCLT (the company law tribunal) sanctions it, it binds <b>every</b> shareholder and creditor, including those who voted against. No one has to sign a share purchase agreement and no cash changes hands.</p>
+  <div class="grid2">
+    <div class="card"><h4>Why use a scheme here?</h4><p>(1) Shares, not cash. (2) Tax-neutral: demerger under Income Tax Act s.2(19AA), amalgamation under s.2(1B). (3) Exempt from the SEBI open offer the promoters' jump to 50% would otherwise trigger (SAST Reg 10(1)(d)). (4) Both steps approved in one go.</p></div>
+    <div class="card"><h4>Votes needed</h4><p>Companies Act: a majority in number holding <b>three-fourths in value</b> of those voting. SEBI adds a <b>majority of minority</b> test when a promoter entity is involved: public "for" votes must exceed public "against" votes, so the promoters can't push it through alone.</p></div>
+  </div>
+  <p>Click any milestone, or press play to watch the deal travel from idea to listing.</p>
+  <div class="box">
+    <div class="btns"><button class="btn primary" id="jplay">▶ Play the journey</button><span class="note" id="jcount"></span></div>
+    <div class="journey" id="journey"><div class="fill" id="jfill"></div></div>
+  </div>
+  <div class="tbl"><table>
+    <thead><tr><th>Date type</th><th>Meaning</th><th>Here</th></tr></thead>
+    <tbody>
+      <tr><td>Appointed date</td><td>From when the scheme applies <i>for accounting</i></td><td>1 Apr 2021 (demerger); merger from the day after the demerger completes</td></tr>
+      <tr><td>Effective date</td><td>When it legally takes effect (after filing the NCLT order with the RoC)</td><td>January 2022</td></tr>
+      <tr><td>Record date</td><td>Whoever holds shares on this date gets the new shares</td><td>17 Jan 2022 for MSWIL shares</td></tr>
+      <tr><td>Ex-date</td><td>From this day, the share trades without the entitlement</td><td>14 Jan 2022: MSSL fell from ₹234.8 to ₹187.6 as DWH left the price</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<!-- 9 STAKEHOLDERS -->
+<section id="l9">
+  <div class="lesson"><span class="n">09</span><h2>Every stakeholder's view</h2></div>
+  <p>A good banker can argue the deal from every chair at the table. Pick a stakeholder.</p>
+  <div class="box">
+    <div class="tabs btns" id="sttabs"></div>
+    <div class="tabpanel" id="stpanel"></div>
+  </div>
+</section>
+
+<!-- 10 BANKER -->
+<section id="l10">
+  <div class="lesson"><span class="n">10</span><h2>The banker's view</h2></div>
+  <h3>Who advised whom</h3>
+  <div class="tbl"><table>
+    <thead><tr><th>Role</th><th>Firm</th><th>Job</th></tr></thead>
+    <tbody>
+      <tr><td>Financial advisors and fairness opinions to MSSL</td><td>Axis Capital, DSP Merrill Lynch (BofA)</td><td>Structure, investor messaging, opinion on the ratio for MSSL holders</td></tr>
+      <tr><td>Financial advisor and fairness opinion to SAMIL</td><td>Kotak Investment Banking</td><td>Protect SAMIL's shareholders' side of the ratio</td></tr>
+      <tr><td>Valuers</td><td>Price Waterhouse &amp; Co, BSR &amp; Associates, Incwert</td><td>Recommend the share entitlement and exchange ratios</td></tr>
+      <tr><td>Due diligence</td><td>PwC (financial and tax), AZB (legal)</td><td>Diligence on SAMIL and its top 11 investments (about 87% of its revenue)</td></tr>
+      <tr><td>Legal counsel</td><td>AZB &amp; Partners</td><td>Draft the scheme, regulatory filings</td></tr>
+    </tbody>
+  </table></div>
+  <h3>Step 1 for any banker: lay out the options</h3>
+  <p>Before recommending a structure, a banker compares alternatives against the client's must-haves. Here is how this deal's choice beats the others:</p>
+  <div class="tbl"><table class="matrix">
+    <thead><tr><th>Option</th><th>No cash needed</th><th>Tax-neutral</th><th>No open offer</th><th>SWS happy</th><th>Minorities happy</th><th>All SAMIL assets in</th></tr></thead>
+    <tbody>
+      <tr><td>Do nothing</td><td class="ok">✓</td><td class="ok">✓</td><td class="ok">✓</td><td class="no">✗</td><td class="no">✗</td><td class="no">✗</td></tr>
+      <tr><td>MSSL buys SAMIL's 49% of SMRP BV for cash</td><td class="no">✗</td><td class="no">✗</td><td class="ok">✓</td><td class="no">✗</td><td>~</td><td class="no">✗</td></tr>
+      <tr><td>MSSL issues new shares to SAMIL for its 49% (preferential issue)</td><td class="ok">✓</td><td class="no">✗</td><td class="no">✗</td><td class="no">✗</td><td>~</td><td class="no">✗</td></tr>
+      <tr><td>SWS buys DWH out of MSSL</td><td class="no">✗</td><td class="no">✗</td><td class="ok">✓</td><td class="ok">✓</td><td class="no">✗</td><td class="no">✗</td></tr>
+      <tr><td>Only demerge DWH</td><td class="ok">✓</td><td class="ok">✓</td><td class="ok">✓</td><td class="ok">✓</td><td class="no">✗</td><td class="no">✗</td></tr>
+      <tr><td>Only merge SAMIL</td><td class="ok">✓</td><td class="ok">✓</td><td class="ok">✓</td><td class="no">✗</td><td class="ok">✓</td><td class="ok">✓</td></tr>
+      <tr class="tot"><td>Demerge DWH, then merge SAMIL (chosen)</td><td class="ok">✓</td><td class="ok">✓</td><td class="ok">✓</td><td class="ok">✓</td><td class="ok">✓</td><td class="ok">✓</td></tr>
+    </tbody>
+  </table></div>
+  <h3>What the bankers actually did, step by step</h3>
+  <ol class="plain">
+    <li><b>Structuring:</b> options paper, sequencing (demerge then merge), tax and SEBI checks. The FAQ says several banks pitched structures over the years.</li>
+    <li><b>Valuation coordination:</b> data room, management projections, diligence reports to valuers, then the fairness opinion.</li>
+    <li><b>Equity story:</b> the 65-page investor deck ("Poised for Next Phase of Growth"), the "Simplify, Align, Grow" message, and pro forma financials.</li>
+    <li><b>Handling pushback:</b> when the stock fell, publishing FAQs with the look-through EBITDA table, the 8% EPS accretion and the greenfield turnaround before the vote (February 2021). This is a textbook way to win a majority-of-minority vote.</li>
+    <li><b>Governance optics:</b> promoter directors abstaining, independent audit committee, RPT approval sought voluntarily, 1-year lock-in.</li>
+    <li><b>Execution:</b> exchange filings, NCLT motions, record date, listing of MSWIL.</li>
+    <li><b>After the deal:</b> SWS's block sales in 2023 and 2024 and the 2024 ₹6,438 cr QIP were all banker-run trades that the new structure made possible.</li>
+  </ol>
+  <div class="box bank"><span class="eyebrow">If you were the banker for minority shareholders, you would push for…</span>
+    <ul class="plain">
+      <li>Fixing the ratio on <b>normalised</b> (ex-greenfield) earnings, or adding a true-up if SMRP BV's recovery came faster than planned.</li>
+      <li>A <b>longer promoter lock-in</b> than one year.</li>
+      <li><b>Hard caps and annual independent review</b> of the MSWIL ↔ Motherson related-party deals (Lesson 09 explains why).</li>
+      <li>A fairness opinion addressed <b>only to public holders</b> from a bank with no other mandate from the group.</li>
+    </ul></div>
+</section>
+
+<!-- 11 PRICE & MCAP -->
+<section id="l11">
+  <div class="lesson"><span class="n">11</span><h2>Share price and market cap: then vs now</h2></div>
+  <p>The line shows the value of <b>one original MSSL share</b>, adjusted for bonus issues. After January 2022 it shows only the Motherson part; the MSWIL shares you also received come on top (see Lesson 12).</p>
+  <div class="chart" id="pchart" role="img" aria-label="MSSL and Samvardhana Motherson price per original share, 2020 to 2026"></div>
+  <div class="tbl"><table>
+    <thead><tr><th>Date</th><th>Event</th><th class="num">Price</th><th class="num">Market cap</th></tr></thead>
+    <tbody>
+      <tr><td>31 Jan 2020</td><td>Board in-principle approval</td><td class="num">₹134</td><td class="num">₹42,300 cr</td></tr>
+      <tr><td>24 Mar 2020</td><td>COVID low</td><td class="num">₹48.5</td><td class="num">₹15,300 cr</td></tr>
+      <tr><td>2 Jul 2020</td><td>Deal announced (close)</td><td class="num">₹103.6</td><td class="num">₹32,700 cr</td></tr>
+      <tr><td>3 Jul 2020</td><td>Market reaction, intraday low (−9%)</td><td class="num">₹94.3</td><td class="num">₹29,800 cr</td></tr>
+      <tr><td>13 Jan 2022</td><td>Last day with DWH inside</td><td class="num">₹234.8</td><td class="num">₹74,100 cr</td></tr>
+      <tr><td>14 Jan 2022</td><td>Ex-DWH: the price drops as DWH leaves</td><td class="num">₹187.6</td><td class="num">n/a</td></tr>
+      <tr><td>28 Mar 2022</td><td>MSWIL lists</td><td class="num">₹66 (MSWIL)</td><td class="num">₹20,800 cr</td></tr>
+      <tr><td>Mar 2023</td><td>SWS sells 3.4% of Motherson</td><td class="num">₹69.9 floor</td><td class="num">n/a</td></tr>
+      <tr><td>Mar 2024</td><td>SWS sells 4.4% more</td><td class="num">~₹121</td><td class="num">n/a</td></tr>
+      <tr><td>Sep 2024</td><td>QIP of ₹6,438 cr</td><td class="num">₹190</td><td class="num">n/a</td></tr>
+      <tr class="tot"><td>16 Oct 2026</td><td>Samvardhana Motherson</td><td class="num">₹160.00</td><td class="num">₹1,70,522 cr</td></tr>
+      <tr class="tot"><td>16 Oct 2026</td><td>MSWIL</td><td class="num">₹35.43</td><td class="num">₹23,496 cr</td></tr>
+    </tbody>
+  </table></div>
+  <p class="note">Bonus issues: Motherson 1:2 in Oct 2022 and 1:2 in Jul 2025 (1 share → 2.25). MSWIL 2:5 in Nov 2022 and 1:2 in Jul 2025 (1 share → 2.1). So the ₹160 today is equivalent to ₹360 per pre-bonus share. Prices from 2020 to 2024 are unadjusted market prices.</p>
+  <div class="grid2">
+    <div class="box"><span class="eyebrow">Group value then</span><p>July 2020: MSSL market cap of about <b>₹32,700 cr</b>, plus the value the valuers placed on SAMIL's other assets, about <b>₹13,800 cr</b>. Total: roughly <b>₹46,500 cr</b>.</p></div>
+    <div class="box"><span class="eyebrow">Group value now</span><p>Motherson ₹1,70,522 cr + MSWIL ₹23,496 cr = <b>₹1,94,000 cr</b>. Subtract the ₹6,438 cr of new QIP money and it is about <b>₹1,87,600 cr</b>. That is <b>roughly 4x</b> in about six years.</p></div>
+  </div>
+</section>
+
+<!-- 12 YOUR SHARES -->
+<section id="l12">
+  <div class="lesson"><span class="n">12</span><h2>Follow your own shares</h2></div>
+  <p>Type how many MSSL shares you owned on 2 July 2020 and watch what they turned into.</p>
+  <div class="box">
+    <label class="ctl" for="nsh">MSSL shares held on 2 Jul 2020<input type="number" id="nsh" value="100" min="1" step="1"></label>
+    <div class="journey" id="mysteps" style="padding-left:28px"></div>
+  </div>
+</section>
+
+<!-- 13 VERDICT -->
+<section id="l13">
+  <div class="lesson"><span class="n">13</span><h2>Was it successful?</h2></div>
+  <div class="tbl"><table>
+    <thead><tr><th>Goal set in 2020</th><th>Result</th><th>Evidence</th></tr></thead>
+    <tbody>
+      <tr><td>Simplify the structure</td><td><span class="pill p-yes">Yes</span></td><td>The holding company is gone and SMRP BV is 100% owned. There are now two clean listed companies.</td></tr>
+      <tr><td>Give SWS a focused DWH stake</td><td><span class="pill p-yes">Yes</span></td><td>SWS kept 25.3% of MSWIL, then sold Motherson down from 17.7% to 9.7% (2023 to 2024).</td></tr>
+      <tr><td>EPS accretive in year one</td><td><span class="pill p-yes">Yes, early</span></td><td>+8% on Q3 FY21 pro forma numbers.</td></tr>
+      <tr><td>Growth platform</td><td><span class="pill p-yes">Yes</span></td><td>SAS, Yachiyo and Dr. Schneider acquired in 2023. FY26 revenue ₹1,26,104 cr, leverage 0.8x.</td></tr>
+      <tr><td>Shareholder value</td><td><span class="pill p-yes">Yes</span></td><td>About 4.2x per share since July 2020 vs about 2.2x for the Nifty 50.</td></tr>
+      <tr><td>MSWIL re-rating as a pure play</td><td><span class="pill p-mixed">Weak</span></td><td>Revenue doubled, but the share price is only ~13% above listing. It listed at about 51x P/E.</td></tr>
+      <tr><td>Vision 2025: US$36 bn revenue</td><td><span class="pill p-no">No</span></td><td>FY25 revenue was about US$13 to 14 bn.</td></tr>
+      <tr><td>Fair price for minorities</td><td><span class="pill p-mixed">Debatable</span></td><td>Analysts called SAMIL "expensive" and the stock fell 5 to 9%. But the recovery proved the DCF projections right.</td></tr>
+    </tbody>
+  </table></div>
+  <div class="box say"><span class="eyebrow">Your verdict in 30 seconds</span>
+    <p>"Structurally, it was a big success. It fixed the JV partner problem, the 51/49 split and the promoter conflict in one tax-neutral, cashless scheme with 99.44% minority approval, and shareholders made about 4x against 2.2x for the index. The weak spots were price and timing: SAMIL was valued richly at the COVID trough, which only looked fair because SMRP BV recovered faster than anyone expected. And separating MSWIL didn't automatically create value, because it listed too expensive."</p></div>
+</section>
+
+<!-- 14 ASSIGNMENT -->
+<section id="l14">
+  <div class="lesson"><span class="n">14</span><h2>Sir's assignment, answered</h2></div>
+  <p>The brief asks for "a short presentation" covering four points. Here is a ready answer for each, with the slides to make.</p>
+  <div class="qa">
+    <details open><summary>1. Core reasons why the restructuring was initiated</summary><div class="a">
+      <p><b>Driven by the JV partner:</b> SWS wanted to focus on Indian wiring harnesses. <b>Minority pressure:</b> MSSL owned only 51% of SMRP BV while the promoter entity owned 49% plus 28 businesses, creating conflicts and a holding company discount. <b>Promoters:</b> they wanted direct control and one platform for growth. <b>Business logic:</b> DWH (India, about 55% ROCE, low capex) and the global business needed different strategies and capital.</p>
+      <p class="note">Slides: (1) group before, with one simple diagram; (2) three stakeholders and three problems.</p></div></details>
+    <details open><summary>2. The math behind the restructuring</summary><div class="a">
+      <p>Step 1: 1:1 demerger, so MSWIL has 3,157.9 mn shares with mirror ownership. Step 2: 51:10 merger, so 3,157.9 − 1,055.8 (cancelled) + 2,415.4 (new) = 4,517.6 mn shares, 43% net dilution. Ownership moves to family 50.4% / public 31.9% / SWS 17.7%. Look-through: the public's stake rises in DWH (38.3 → 47.2%), SMRP BV (19.5 → 26.8%) and SAMIL businesses (0 → 26.8%). EBITDA accretion +3.1% (FY20); EPS accretion +8% (Q3 FY21).</p>
+      <p class="note">Slides: (3) the two steps with before/after charts; (4) share-count bridge and look-through table.</p></div></details>
+    <details open><summary>3. Valuation of both entities and the resulting valuation</summary><div class="a">
+      <p>SOTP, 50% DCF + 50% comparable multiples, NAV not used. MSSL ex-DWH ≈ ₹101 per share (₹31,930 cr); SAMIL ≈ ₹516 per share (₹24,440 cr), of which ₹10,675 cr is its MSSL stake and ₹13,765 cr is its other assets. Ratio 5.1. Merged value ≈ ₹45,695 cr, still ₹101 per share. Market check: MSSL market cap ₹32,700 cr at announcement; after the split, MSWIL listed at ₹20,800 cr. Today: Motherson ₹1.71 lakh cr + MSWIL ₹0.23 lakh cr.</p>
+      <p class="note">Slides: (5) valuers' table and method; (6) value bridge and then-vs-now market cap.</p></div></details>
+    <details open><summary>4. Your post-facto view: was it successful, and why?</summary><div class="a">
+      <p>Use the scorecard in Lesson 13 and the 30-second verdict. Successful structurally and for shareholder returns (about 4.2x vs 2.2x Nifty). SWS's later sell-down proves the separation was what it wanted. Caveats: the rich pricing of SAMIL at the trough, MSWIL's flat stock, Vision 2025 missed, and the new related-party conflict at MSWIL.</p>
+      <p class="note">Slides: (7) scorecard; (8) verdict plus lessons for bankers.</p></div></details>
+  </div>
+</section>
+
+<!-- 15 TEACH -->
+<section id="l15">
+  <div class="lesson"><span class="n">15</span><h2>Teach it to someone else</h2></div>
+  <div class="grid2">
+    <div class="box"><span class="eyebrow">Whiteboard: draw 3 pictures</span>
+      <ol class="plain">
+        <li><b>Before:</b> two boxes, MSSL and SAMIL. Draw SMRP BV split under both (51/49). Write "SWS 25%" on MSSL.</li>
+        <li><b>Move 1:</b> pull a green "DWH" box out of MSSL into a new box, MSWIL. Copy MSSL's owners onto it.</li>
+        <li><b>Move 2:</b> draw an arrow pouring SAMIL into MSSL. Cross out SAMIL's 33% of MSSL. Write "family 50%".</li>
+      </ol></div>
+    <div class="box"><span class="eyebrow">The 60-second pitch</span>
+      <p>"Motherson's JV partner Sumitomo wanted only Indian wiring, and investors hated that the promoters privately owned half of the best business. So in 2020 they did two moves in one court scheme. First, they demerged Indian wiring into MSWIL, giving every shareholder 1-for-1 shares so Sumitomo kept 25%. Then they merged the family company SAMIL into Motherson at 51-for-10, so Motherson owns 100% of SMRP BV and the family owns 50% directly. No cash, no tax, no open offer, and 99% minority approval. Shareholders made about 4x since."</p></div>
+  </div>
+  <div class="box"><span class="eyebrow">Three ideas that unlock the whole case</span>
+    <ol class="plain">
+      <li><b>A demerger copies ownership.</b> Whoever owns the parent on the record date owns the child in the same proportion. That is why the order matters.</li>
+      <li><b>A swap ratio is a price paid in shares.</b> It is fair only if both sides are valued correctly. Too high a ratio means value moves to the promoters.</li>
+      <li><b>Look through to the businesses.</b> Don't judge a deal by % in one company; ask what slice of each business each person ends up with.</li>
+    </ol></div>
+</section>
+
+<!-- 16 QA -->
+<section id="l16">
+  <div class="lesson"><span class="n">16</span><h2>Quick-fire questions</h2></div>
+  <div class="qa" id="qa"></div>
+</section>
+
+<!-- 17 LIKELY QUESTIONS -->
+<section id="l17">
+  <div class="lesson"><span class="n">17</span><h2>Sir's likely questions</h2></div>
+  <p>Grouped by theme. Each has a model answer and the <b>trap</b> to avoid. Red = very likely, amber = likely. Sir is a banker, so expect the "why" and "what would you do" questions more than the "what" questions.</p>
+  <div class="btns" id="qfilter"></div>
+  <div class="qa" id="likely"></div>
+</section>
+
+<!-- 18 ASK SIR -->
+<section id="l18">
+  <div class="lesson"><span class="n">18</span><h2>Questions to ask sir</h2></div>
+  <p>Sharp questions that show you have gone beyond the case. Each one is grounded in a fact from the filings, so you can back it up. The "why it's a good question" line tells you what you are really probing.</p>
+  <div class="qa" id="asksir"></div>
+  <div class="box bank"><span class="eyebrow">How to ask</span>
+    <p>Lead with the fact, then the question: "Sir, the valuation date was 31 March 2020, right at the COVID low. As MSSL's banker, would you have pushed for a true-up mechanism?" Facts first make the question land as insight, not curiosity.</p></div>
+</section>
+
+<section id="src">
+  <h3>Sources</h3>
+  <p class="note">Case files: MSSL Press Release and Investor Presentation (Jul 2020); FAQs and Addendum (Feb 2021); NSE filing with the Composite Scheme, valuation reports and fairness opinions (24 Jul 2020).</p>
+  <ol class="src">
+    <li><a href="https://www.business-standard.com/article/markets/motherson-sumi-slips-9-after-board-approves-group-restructuring-plan-120070300251_1.html">Business Standard: Motherson Sumi slips 9% (3 Jul 2020)</a></li>
+    <li><a href="https://www.business-standard.com/amp/article/companies/promoter-entity-valuation-in-restructured-entity-weighs-on-motherson-120070300725_1.html">Business Standard: Promoter entity valuation weighs on Motherson</a></li>
+    <li><a href="https://www.motilaloswal.com/site/rreports/637161496629217480.pdf">Motilal Oswal note (31 Jan 2020)</a></li>
+    <li><a href="https://www.wirecable.in/motherson-sumi-systems-gets-shareholders-nod-for-proposed-group-restructuring/">Wire &amp; Cable India: 99.44% public approval</a></li>
+    <li><a href="https://blog.investyadnya.in/2022/04/05/motherson-groups-lists-its-wiring-harness-business/">Investyadnya: timeline and MSWIL listing</a></li>
+    <li><a href="https://www.thetechoutlook.com/current-affairs/business/motherson-sumi-ltd-shares-down-by-20-as-the-company-trades-for-ex-domestic-wiring-harness/">The Tech Outlook: ex-DWH trading (14 Jan 2022)</a></li>
+    <li><a href="https://www.business-standard.com/article/markets/motherson-sumi-wiring-freezes-5-lower-circuit-on-debut-on-bse-122032800502_1.html">Business Standard: MSWIL debut (28 Mar 2022)</a></li>
+    <li><a href="https://www.business-standard.com/amp/article/companies/further-paring-of-stake-will-remain-an-overhang-for-samvardhan-motherson-123031601259_1.html">Business Standard: SWS sells 3.4% (Mar 2023)</a></li>
+    <li><a href="https://www.business-standard.com/amp/companies/news/sumitomo-wiring-sells-4-4-stake-in-samvardhana-motherson-for-rs-3-633-cr-124030601051_1.html">Business Standard: SWS sells 4.4% (Mar 2024)</a></li>
+    <li><a href="https://www.business-standard.com/amp/markets/capital-market-news/samvardhana-motherson-international-raises-rs-6-438-cr-via-qip-124092300462_1.html">Business Standard: ₹6,438 cr QIP (Sep 2024)</a></li>
+    <li><a href="https://nsearchives.nseindia.com/corporate/MOTHERSON_20052026143525_Press_Release-Signed.pdf">NSE: Samvardhana Motherson FY26 results</a></li>
+    <li><a href="https://www.valueresearchonline.com/stocks/43362/samvardhana-motherson-international-ltd/">Value Research: Motherson price and market cap (16 Oct 2026)</a></li>
+    <li><a href="https://ticker.finology.in/company/MSUMI">Finology: MSWIL price, market cap and financials (16 Oct 2026)</a></li>
+    <li><a href="https://www.incredmoney.com/stocks/bosch-ltd">InCred Money: Bosch Ltd (16 Oct 2026)</a></li>
+    <li><a href="https://www.valueresearchonline.com/stocks/41353/bharat-forge-ltd/">Value Research: Bharat Forge (16 Oct 2026)</a></li>
+    <li><a href="https://www.valueresearchonline.com/stocks/282294/sona-blw-precision-forgings-ltd">Value Research: Sona BLW (16 Oct 2026)</a></li>
+    <li><a href="https://www.screener.in/company/id/2090">Screener: Uno Minda (21 Sep 2026)</a></li>
+    <li><a href="https://www.angelone.in/news/share-market/samvardhana-motherson-bonus-history-declared-bonus-issue-on-may-29">Angel One: Motherson bonus history</a></li>
+    <li><a href="https://www.arihantcapital.com/company-information/bonus-issues/76359">Arihant Capital: MSWIL bonus history</a></li>
+  </ol>
+</section>
+</div>
+
+
+</main>
+<div class="pal" id="pal" hidden><div class="palbox" role="dialog" aria-label="Search"><input id="palIn" placeholder="Search sections, cases and pages…" autocomplete="off"><div class="pallist" id="palList"></div><div class="palhint">↑ ↓ move · Enter open · Esc close · Shortcuts: 1 to 4 pages, d theme</div></div></div>
+<button class="totop" id="totop" type="button" aria-label="Back to top">↑</button>
+<div class="toast" id="toast" role="status"></div>
+<footer class="foot"><span>Restructuring Academy · built for the IB course (Session 7: M&amp;A and Restructuring).</span><span><a href="index.html">Home</a> · <a href="motherson.html">Motherson</a> · <a href="schemes.html">Schemes 101</a> · <a href="practice.html">Practice Lab</a></span></footer>
+<script src="assets/motherson.js"></script><script src="assets/site.js"></script>
+</body></html>
